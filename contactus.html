@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+
+    <!-- FONT STYLES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;800&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav__container flex align-center justify-between ">
+            <a href="index.html" class="logo">S W Y <span><strong>P R O</strong></span></a>
+            <ul class="flex align-center justify-between gap-4">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section class="contactus_form">
+                <form method="POST" enctype="multipart/form-data"
+                    action="https://formsubmit.co/8205485e31d736b526edde8e2314aa53" class="contact_field"
+                    name="contactForm">
+                    <h2>LET'S COLLABORATE</h2>
+                    <p>Feel Free to contact us any time. We will get back to you as soon as we
+                        can!.</p>
+                    <input type="text" name="name" placeholder="Name" required class="form-control form-group" />
+                    <input type="email" name="email" placeholder="Email Address" required
+                        class="form-control form-group">
+                    <input type="text" name="_subject" placeholder="Subject" required class="form-control form-group">
+                    <!-- actual upload which is hidden -->
+                    <input type="file" id="actual-btn" name="attachment" style="display: none;" id="actual-btn"
+                        hidden />
+
+                    <!-- our custom upload button -->
+                    <label for="actual-btn">Choose File</label>
+
+                    <!-- name of file chosen -->
+                    <span id="file-chosen">No file chosen</span>
+
+                    <textarea name="message" rows="5" placeholder="Message" required
+                        class="form-control form-group"></textarea>
+                    <input type="hidden" name="_next" value="https://vikaschandra38.github.io/swypro/index.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <button type="submit" id="submitForm" class="button">Send</button>
+                </form>
+                <img src="images/filing_system.svg" alt="upload">
+            </section>
+        </main>
+
+        <footer>
+            <div class="contact_info_sec">
+                <div class="flex info_single align-start gap-2">
+                    <img src="images/location.png" alt="address">
+                    <div>
+                        <h4>Address</h4>
+                        <address>
+                            <p>123 Pringdale Gardens Circle</p>
+                            <p>Toronto ON M1J 0B1</p>
+                            <p>Canada</p>
+                        </address>
+                    </div>
+                </div>
+                <div class="flex align-start gap-2">
+                    <img src="images/email.png" alt="email">
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@swypro.com" style="text-decoration:none">info@swypro.com</a></p>
+                    </div>
+                </div>
+                <div class="flex  align-start gap-2">
+                    <img src="images/phone.png" alt="phone">
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 705 772 4753</p>
+                    </div>
+                </div>
+                <div class="flex flex-column align-center social_item_inner">
+                    <h4>Social Us</h4>
+                    <div class="flex align-start gap-2">
+                        <a href="#"><img src="images/facebook.gif" alt="facebook"></a>
+                        <a href="#"><img src="images/linkedin.gif" alt="linkedin"></a>
+                        <a href="tel:+17057724753"><img src="images/whatsapp.gif" alt="whatsapp"></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">©2023 SWIPRO INC. All rights reserved.</p>
+            <div style="display: none;">
+                <a target="_blank" href="https://icons8.com/icon/RvzNyBfqOKDa/linkedin-circled">LinkedIn Circled</a>
+                icon by
+                <a target="_blank" href="https://icons8.com">Icons8</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const actualBtn = document.getElementById('actual-btn');
+
+        const fileChosen = document.getElementById('file-chosen');
+
+        actualBtn.addEventListener('change', function () {
+            fileChosen.textContent = this.files[0].name;
+        })
+
+    </script>
+</body>
+
+</html>

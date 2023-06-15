@@ -1,0 +1,146 @@
+.services__header {
+    position: relative;
+    height: calc(100vh - 5rem);
+    background-image: url(../images/Sprinkle.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+}
+
+header h1 span{
+    color: #f9ff00;
+}
+
+.our__requirements {
+    margin: 5rem 6rem;
+}
+
+.our__requirements h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tech_stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.tech_stack .card {
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tech_stack .card .icon {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    transition: 0.7s;
+}
+
+.tech_stack .card .icon img {
+    height: 180px;
+    width: 200px;
+}
+
+.tech_stack .card .face {
+    width: 300px;
+    height: 180px;
+    transition: 0.5s;
+}
+
+.tech_stack .card .face.face1 {
+    position: relative;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(80px);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.tech_stack .card:hover .face.face1 {
+    transform: translateY(0px);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.tech_stack .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.tech_stack .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.tech_stack .card .face.face1 .content i {
+    max-width: 100px;
+}
+
+.tech_stack .card .face.face2 {
+    position: relative;
+    background-color: #002642;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-80px);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.tech_stack .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.tech_stack .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.tech_stack .card .face.face2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.tech_stack .card .face.face2 .content h3 a {
+    color: #f9ff00;
+}
+
+.contactus{
+    margin: 5rem 6rem;
+}
+
+.contactus h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contactus p{
+    margin: 0 0 2rem 0; 
+}
+
+.contactus a{
+    display: block;
+    margin: auto;
+}
