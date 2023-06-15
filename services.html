@@ -15,6 +15,10 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;800&family=Roboto+Condensed:wght@700&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,12 +31,15 @@
     <nav>
         <div class="nav__container flex align-center justify-between ">
             <a href="index.html" class="logo">S W Y <span><strong>P R O</strong></span></a>
-            <ul class="flex align-center justify-between gap-4">
+            <ul class="nav-list flex align-center justify-between gap-4">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
+            <div class="toggle-btn">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </nav>
 
@@ -48,7 +55,7 @@
         </header>
 
 
-        <main>
+       <main>
             <section class="our__requirements">
                 <h2>OUR SPECIALIZATIONS</h2>
                 <div class="tech_stack">
@@ -191,7 +198,7 @@
                 </div>
             </section>
 
-            <section data-aos="fade-up" class="contactus">
+           <section data-aos="fade-up" class="contactus">
                 <h2>CONTACT US</h2>
                 <p> Ready to take your organization to the next level? Reach out to us today to discuss how
                     <strong>SWYPRO</strong> can
@@ -201,7 +208,8 @@
                 </p>
                 <a href="./contactus.html" class="button">Contact Us</a>
             </section>
-        </main>
+        </main> 
+
 
         <footer>
             <div class="contact_info_sec">
@@ -260,8 +268,20 @@
     <script>
         $(document).ready(function () {
             AOS.init({
-                duration: 1200,
+                duration: 500,
             });
+
+            function showMenu() {
+                const ul = document.querySelector(".nav-list");
+                ul.classList.toggle("nav-active");
+                if (ul.classList.contains('nav-active')) {
+                    document.querySelector("#menuIcon").classList.add('fa-close');
+                } else {
+                    document.querySelector("#menuIcon").classList.remove('fa-close');
+                }
+            }
+            const toggleBtn = document.querySelector(".toggle-btn");
+            toggleBtn.addEventListener('click', showMenu);
         });
     </script>
 </body>

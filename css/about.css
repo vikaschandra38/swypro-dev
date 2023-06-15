@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-header .img-block{
+header .img-block {
     overflow: hidden;
 }
 
@@ -83,7 +83,7 @@ header h1 {
     gap: 1rem;
 }
 
-.our__mission h2{
+.our__mission h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -94,11 +94,12 @@ header h1 {
     margin: auto;
 }
 
-.mission_content p{
+.mission_content p {
     padding: 2rem 3rem;
     box-shadow: 0.5rem 0.5rem #002642, -0.5rem -0.5rem #002642;
 }
-.approach_content p{
+
+.approach_content p {
     padding: 2rem 3rem;
     box-shadow: 0.5rem 0.5rem #002642, -0.5rem -0.5rem #002642;
 }
@@ -113,7 +114,7 @@ header h1 {
     gap: 1rem;
 }
 
-.our__approach h2{
+.our__approach h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -124,20 +125,108 @@ header h1 {
     margin: auto;
 }
 
-.contactus{
+.contactus {
     margin: 5rem 6rem;
 }
 
-.contactus h2{
+.contactus h2 {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.contactus p{
-    margin: 0 0 2rem 0; 
+.contactus p {
+    margin: 0 0 2rem 0;
 }
 
-.contactus a{
+.contactus a {
     display: block;
     margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .aboutus__header {
+        margin: 2rem 1rem;
+        margin-top: 6rem;
+        grid-template-columns: 1fr;
+        height: 100%;
+        gap: 3rem;
+    }
+
+    .img-block.owl-carousel img,
+    .our__mission img,
+    .our__approach img {
+        width: 320px;
+        height: 320px;
+        object-fit: contain;
+    }
+
+    .features {
+        display: block;
+        width: 100%;
+    }
+
+    .features h2 {
+        border: none;
+        margin: 1rem 0;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+
+    .aboutus__container {
+        margin: 1rem;
+    }
+
+    .aboutus__container h2 {
+        margin: 2rem 0;
+    }
+
+    .aboutus__container p {
+        padding: 1rem;
+        box-shadow: 0.5rem 0.5rem #002642, -0.5rem -0.5rem #002642;
+        text-align: left;
+    }
+
+    .our__mission,
+    .our__approach {
+        margin: 2rem 0;
+        padding: 0;
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .our__approach {
+        margin: 0;
+    }
+
+    .our__approach img {
+        grid-row-start: 1;
+    }
+
+    .mission_content,
+    .approach_content {
+        margin: 1rem;
+    }
+
+    .mission_content h2,
+    .approach_content h2 {
+        margin: 2rem 0;
+    }
+
+    .mission_content p,
+    .approach_content p {
+        padding: 1rem;
+    }
+    
+    .contactus{
+        margin: 3rem 1rem;
+    }
+    
+    .contactus h1{
+        margin: 2rem 0;
+    }
+    
+    .contactus p{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1rem;
+    }
 }

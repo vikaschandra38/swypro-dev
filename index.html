@@ -46,7 +46,7 @@
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
             <div class="toggle-btn">
-                <i class="fa-solid fa-bars"></i>
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
             </div>
         </div>
     </nav>
@@ -87,8 +87,8 @@
             </div>
         </header>
 
-         <main>
-  <!--           <section data-aos="fade-up" class="intro__container">
+        <main>
+            <section data-aos="fade-up" class="intro__container">
                 <h2>RECRUITMENT & CONSULTING PARTNER</h2>
                 <div class="intro-content">
                     <div class="intro__left">
@@ -113,9 +113,9 @@
                         <img src="images/discussion.gif" alt="discussion">
                     </div>
                 </div>
-            </section> -->
+            </section>
 
-<!--             <section data-aos="fade-up" class="services__container">
+            <section data-aos="fade-up" class="services__container">
                 <h2>OUR SERVICES</h2>
                 <div class="services">
                     <div class="service">
@@ -253,10 +253,10 @@
                     </div>
                     <img src="images/interview_copy.gif" alt="interview">
                 </div>
-            </section> -->
+            </section>
         </main>
 
-  <!--       <footer>
+        <footer>
             <div class="contact_info_sec">
                 <div class="flex info_single align-start gap-2">
                     <img src="images/location.png" alt="address">
@@ -298,7 +298,7 @@
                 icon by
                 <a target="_blank" href="https://icons8.com">Icons8</a>
             </div>
-        </footer> -->
+        </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
@@ -339,9 +339,14 @@
                 duration: 600,
             });
 
-            function showMenu(){
+            function showMenu() {
                 const ul = document.querySelector(".nav-list");
                 ul.classList.toggle("nav-active");
+                if(ul.classList.contains('nav-active')){
+                    document.querySelector("#menuIcon").classList.add('fa-close');
+                }else{
+                    document.querySelector("#menuIcon").classList.remove('fa-close');
+                }
             }
             const toggleBtn = document.querySelector(".toggle-btn");
             toggleBtn.addEventListener('click', showMenu);

@@ -144,3 +144,38 @@ header h1 span{
     display: block;
     margin: auto;
 }
+
+@media only screen and (max-width: 500px) {
+
+    .services__header h1{
+        font-size: 4.5rem;
+    }
+    .our__requirements{
+        margin: 1rem;
+    }
+
+    .our__requirements h2{
+        margin-bottom: 2rem;
+    }
+
+    .tech_stack{
+        grid-template-columns: 1fr;
+    }
+
+    .tech_stack .card .face{
+        width: 100%;
+    }
+
+    .contactus{
+        margin: 3rem 1rem;
+    }
+    
+    .contactus h1{
+        margin: 2rem 0;
+    }
+    
+    .contactus p{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1rem;
+    }
+}
