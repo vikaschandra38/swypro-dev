@@ -622,11 +622,6 @@ footer p {
         overflow: hidden;
     }
 
-    .owl-carousel img {
-        height: 400px;
-        width: 400px;
-    }
-
     .header__left p {
         text-align: center;
     }
@@ -692,7 +687,6 @@ footer p {
     .ol-cards {
         grid-template-columns: 1fr;
         row-gap: 4rem;
-        padding: 1em;
     }
 
     .ol-cards li {
